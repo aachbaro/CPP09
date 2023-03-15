@@ -21,6 +21,10 @@ public :
     ~bitcoinValue(void);
     bitcoinValue   &operator=(const bitcoinValue &obj);
 
+    //methods
+
+    float       getTotalValue(float const amount);
+
     //accessor
     float       getValue();
     std::string getDate();
