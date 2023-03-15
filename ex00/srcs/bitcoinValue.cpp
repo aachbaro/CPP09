@@ -42,7 +42,7 @@ bitcoinValue   &bitcoinValue::operator=(const bitcoinValue &obj)
 
 float       bitcoinValue::getTotalValue(float const amount)
 {
-    return (_value * amount);
+    return (this->_value * amount);
 }
 
 // accessor
