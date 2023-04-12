@@ -1,9 +1,9 @@
-NAME		= btc
+NAME		= PmergeMe
 SRCSDIR		= .
 OBJSDIR		= objs
 INCLUDES	= .
 SRCS		= srcs/main.cpp \
-				srcs/bitcoinvalue.cpp
+				srcs/PmergeMe.cpp
 CC			= c++
 CFLAGS		= -Wall -Wextra -Werror -std=c++98
 

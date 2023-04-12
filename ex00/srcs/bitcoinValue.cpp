@@ -1,38 +1,38 @@
-#include "../inc/bitcoinValue.hpp"
+#include "../inc/bitcoinvalue.hpp"
 
 // constructor - destructor
 
-bitcoinValue::bitcoinValue(void)
+bitcoinvalue::bitcoinvalue(void)
 {
-    //std::cout << "bitcoinValue default constructor called" << std::endl;
+    //std::cout << "bitcoinvalue default constructor called" << std::endl;
     this->_value = 0;
     this->_date = "";
     return ;
 }
 
-bitcoinValue::bitcoinValue(std::string const date, float const value)
+bitcoinvalue::bitcoinvalue(std::string const date, float const value)
 {
     //std::cout << "bitCoin constructor called" << std::endl;
     this->_value = value;
     this->_date = date;
 }
 
-bitcoinValue::bitcoinValue(const bitcoinValue &obj)
+bitcoinvalue::bitcoinvalue(const bitcoinvalue &obj)
 {
-    //std::cout << "bitcoinValue copy constructor called" << std::endl;
+    //std::cout << "bitcoinvalue copy constructor called" << std::endl;
     *this = obj;
     return ;
 }
 
-bitcoinValue::~bitcoinValue(void)
+bitcoinvalue::~bitcoinvalue(void)
 {
-    //std::cout << "bitcoinValue destructor called" << std::endl;
+    //std::cout << "bitcoinvalue destructor called" << std::endl;
     return ;
 }
 
-bitcoinValue   &bitcoinValue::operator=(const bitcoinValue &obj)
+bitcoinvalue   &bitcoinvalue::operator=(const bitcoinvalue &obj)
 {
-    //std::cout << "bitcoinValue copy assignement coperator called" << std::endl;
+    //std::cout << "bitcoinvalue copy assignement coperator called" << std::endl;
     this->_value = obj._value;
     this->_date = obj._date;
     return (*this);
@@ -40,14 +40,14 @@ bitcoinValue   &bitcoinValue::operator=(const bitcoinValue &obj)
 
 // methods
 
-float       bitcoinValue::getTotalValue(float const amount)
+float       bitcoinvalue::getTotalValue(float const amount)
 {
     return (this->_value * amount);
 }
 
 // accessor
 
-float       bitcoinValue::getValue(void) { return (_value); }
-std::string bitcoinValue::getDate(void) { return (_date); }
-void        bitcoinValue::setValue(float const value) { _value = value; }
-void        bitcoinValue::setDate(std::string const date) { _date = date; }
+float       bitcoinvalue::getValue(void) { return (_value); }
+std::string bitcoinvalue::getDate(void) { return (_date); }
+void        bitcoinvalue::setValue(float const value) { _value = value; }
+void        bitcoinvalue::setDate(std::string const date) { _date = date; }

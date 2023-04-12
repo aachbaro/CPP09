@@ -4,7 +4,7 @@
 # include <string>
 # include <iostream>
 
-class bitcoinValue {
+class bitcoinvalue {
 
 private :
 
@@ -15,11 +15,11 @@ public :
 
     //constructor - destructor
 
-    bitcoinValue(void);
-    bitcoinValue(std::string const date, float const value);
-    bitcoinValue(const bitcoinValue &obj);
-    ~bitcoinValue(void);
-    bitcoinValue   &operator=(const bitcoinValue &obj);
+    bitcoinvalue(void);
+    bitcoinvalue(std::string const date, float const value);
+    bitcoinvalue(const bitcoinvalue &obj);
+    ~bitcoinvalue(void);
+    bitcoinvalue   &operator=(const bitcoinvalue &obj);
 
     //methods
 

@@ -4,24 +4,24 @@
 #include <unistd.h>
 #include <iostream>
 #include <vector>
-#include "../inc/bitcoinValue.hpp"
+#include "../inc/bitcoinvalue.hpp"
 #include <fstream>
 #include <cstdlib>
 
-void fill_prices(std::vector<bitcoinValue> *referenceTab);
+void fill_prices(std::vector<bitcoinvalue> *referenceTab);
 int datecmp(std::string const date1, std::string const date2);
 
 int main(int ac, char **av)
 {
-    std::vector<bitcoinValue>   referenceTab;
+    std::vector<bitcoinvalue>   referenceTab;
     std::ifstream               fd(av[ac-1]);
     std::string                 tmp;
     std::string                 tmpdate;
     float                       tmpamount;
 
     fill_prices(&referenceTab);
-    std::vector<bitcoinValue>::iterator it = referenceTab.begin();
-    std::vector<bitcoinValue>::iterator itend = referenceTab.end();
+    std::vector<bitcoinvalue>::iterator it = referenceTab.begin();
+    std::vector<bitcoinvalue>::iterator itend = referenceTab.end();
 
     while (std::getline(fd, tmp))
     {
@@ -54,11 +54,11 @@ int main(int ac, char **av)
     return (0);
 }
 
-void fill_prices(std::vector<bitcoinValue> *referenceTab)
+void fill_prices(std::vector<bitcoinvalue> *referenceTab)
 {
     std::ifstream data("data.csv");
     std::string tmp;
-    bitcoinValue newElem;
+    bitcoinvalue newElem;
 
     std::getline(data, tmp);
     while (std::getline(data, tmp))
